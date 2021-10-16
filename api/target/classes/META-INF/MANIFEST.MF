@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Built-By: Cleiton
+Build-Jdk: 16.0.2
+Implementation-Title: Spring Boot Blank Project (from https://github.com
+ /making/spring-boot-blank)
+Implementation-Version: 0.0.1-SNAPSHOT
+Implementation-Vendor-Id: br.com.estudo
+Implementation-Vendor: Pivotal Software, Inc.
+Main-Class: br.com.estudo.api.App
+Created-By: Maven Integration for Eclipse
+
