@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "d1df36c7-119d-4dd2-8a48-1a1a24bf2aa4",
+		"name": "Java Spring VC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Costumer",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/costumer/get/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"costumer",
+								"get",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/costumer/getAll",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"costumer",
+								"getAll"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"c\",\r\n    \"email\": \"b@b.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/costumer/save",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"costumer",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "change",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 3,\r\n    \"name\": \"c\",\r\n    \"email\": \"c@c.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8089/costumer/change/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"costumer",
+								"change",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8089/costumer/delete/3",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"costumer",
+								"delete",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JWT",
+			"item": [
+				{
+					"name": "Get Info From Header",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "jwt-token",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJPbmxpbmUgSldUIEJ1aWxkZXIiLCJpYXQiOjE2MzQ5OTAwMzYsImV4cCI6MTc2MTIyMDQzNiwiYXVkIjoid3d3LnRlc3RlLmNvbSIsInN1YiI6IlRlc3RlIEpXVCIsImNoYXNzaSI6IjIzNDVNZWlhNzgiLCJjb250cmF0byI6IkExIiwiY3BmX2NucGoiOiIwMDAwMDAwMDE5MiIsImVtYWlsIjoidmluaUBjYXJyYXJhLmNvbS5iciJ9.r-GglavxS5KPZO_1kqGxGe7TwGTq0IjI4mMQyShLECE",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8089/exemplo/jwt",
+							"host": [
+								"localhost"
+							],
+							"port": "8089",
+							"path": [
+								"exemplo",
+								"jwt"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Hello World",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8089/hello/greetings",
+					"host": [
+						"localhost"
+					],
+					"port": "8089",
+					"path": [
+						"hello",
+						"greetings"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

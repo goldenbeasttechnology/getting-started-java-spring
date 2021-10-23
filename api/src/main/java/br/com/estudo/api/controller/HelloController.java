@@ -1,14 +1,14 @@
-package br.com.estudo.api;
+package br.com.estudo.api.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping(path = "/main")
+@RequestMapping(path = "/hello")
 public class HelloController {
 	
-	@GetMapping("/hello")
+	@GetMapping("/greetings")
 	public String helloWorld() {
 		return "Hello World";
 	}
