@@ -1,6 +1,9 @@
 C:\src\Fontes\GoldenBeast\getting-started-java-spring\api\src\main\java\br\com\estudo\api\controller\JWTReaderController.java
 C:\src\Fontes\GoldenBeast\getting-started-java-spring\api\src\main\java\br\com\estudo\api\controller\CostumerController.java
+C:\src\Fontes\GoldenBeast\getting-started-java-spring\api\src\main\java\br\com\estudo\api\service\CostumerService.java
 C:\src\Fontes\GoldenBeast\getting-started-java-spring\api\src\main\java\br\com\estudo\api\model\Costumer.java
+C:\src\Fontes\GoldenBeast\getting-started-java-spring\api\src\main\java\br\com\estudo\api\model\CustomDateDeserializer.java
 C:\src\Fontes\GoldenBeast\getting-started-java-spring\api\src\main\java\br\com\estudo\api\model\TokenPayload.java
+C:\src\Fontes\GoldenBeast\getting-started-java-spring\api\src\main\java\br\com\estudo\api\model\CustomDateSerializer.java
 C:\src\Fontes\GoldenBeast\getting-started-java-spring\api\src\main\java\br\com\estudo\api\controller\HelloController.java
 C:\src\Fontes\GoldenBeast\getting-started-java-spring\api\src\main\java\br\com\estudo\api\App.java

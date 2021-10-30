@@ -1,19 +1,29 @@
 package br.com.estudo.api.model;
 
+import java.util.Date;
+
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+
 public class Costumer {
 	
 	private Long id;
     private String name;
     private String email;
     
-    public Costumer() {
+	@JsonSerialize(using = CustomDateSerializer.class)
+	@JsonDeserialize(using = CustomDateDeserializer.class)
+	private Date dataNascimento;
+
+	public Costumer() {
     	super();
     }
     
-    public Costumer(Long id, String name, String email) {
+    public Costumer(Long id, String name, String email, Date dataNascimento) {
     	this.id = id;
     	this.name = name;
     	this.email = email;
+    	this.dataNascimento = dataNascimento;
     }
     
 	public Long getId() {
@@ -38,6 +48,14 @@ public class Costumer {
 	
 	public void setEmail(String email) {
 		this.email = email;
+	}
+	
+    public Date getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(Date dataNascimento) {
+		this.dataNascimento = dataNascimento;
 	}
 
 }

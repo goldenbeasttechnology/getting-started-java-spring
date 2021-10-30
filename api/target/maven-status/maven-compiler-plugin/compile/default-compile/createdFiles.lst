@@ -1,6 +1,9 @@
 br\com\estudo\api\model\Costumer.class
+br\com\estudo\api\model\CustomDateSerializer.class
 br\com\estudo\api\controller\HelloController.class
 br\com\estudo\api\model\TokenPayload.class
+br\com\estudo\api\service\CostumerService.class
+br\com\estudo\api\model\CustomDateDeserializer.class
 br\com\estudo\api\App.class
 br\com\estudo\api\controller\CostumerController.class
 br\com\estudo\api\controller\JWTReaderController.class

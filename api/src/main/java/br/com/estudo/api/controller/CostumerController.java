@@ -1,8 +1,8 @@
 package br.com.estudo.api.controller;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,53 +15,42 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import br.com.estudo.api.model.Costumer;
+import br.com.estudo.api.service.CostumerService;
 
 
 @RestController
 @RequestMapping(path = "/costumer")
 public class CostumerController {
 	
+	@Autowired
+	CostumerService costumerService;
+	
 	@GetMapping("/getAll")
-    public List<Costumer> getAll() {
-		List<Costumer> costumerList = new ArrayList<Costumer>();
-		costumerList.add(new Costumer(1L, "a", "a@a.com"));
-		costumerList.add(new Costumer(2L, "b", "b@b.com"));
-		
-        return costumerList;
+    public List<Costumer> getAll() {		
+        return costumerService.getAll();
     }
 
     @GetMapping("/get/{id}")
-    public ResponseEntity<Costumer> get(@PathVariable Long id) {
-		List<Costumer> costumerList = new ArrayList<Costumer>();
-		costumerList.add(new Costumer(1L, "a", "a@a.com"));
-		costumerList.add(new Costumer(2L, "b", "b@b.com"));
-		
-		Costumer foundCostumer = null;
-		for(Costumer c : costumerList) {
-			if(c.getId() == id) {
-				foundCostumer = c;
-				break;
-			}
-		}
-		
-		return new ResponseEntity<Costumer>(foundCostumer, HttpStatus.OK);
+    public ResponseEntity<Costumer> get(@PathVariable Long id) {		
+		return new ResponseEntity<Costumer>(costumerService.get(id), HttpStatus.OK);
     }
 
     @PostMapping("/save")
-    public ResponseEntity<Costumer> createClient(@RequestBody Costumer client) {
-        return new ResponseEntity<Costumer>(client, HttpStatus.CREATED);
+    public ResponseEntity<Costumer> createClient(@RequestBody Costumer costumer) {
+    	costumerService.save(costumer);
+        return new ResponseEntity<Costumer>(costumer, HttpStatus.CREATED);
     }
     
-    //warning
     @PutMapping("/change/{id}")
-    public ResponseEntity<Costumer> updateClient(@PathVariable Long id, @RequestBody Costumer client) {
-        return new ResponseEntity<Costumer>(client, HttpStatus.OK);
+    public ResponseEntity<Costumer> updateClient(@PathVariable Long id, @RequestBody Costumer costumer) {
+    	costumerService.change(id, costumer);
+        return new ResponseEntity<Costumer>(costumer, HttpStatus.OK);
     }
 
-    //muito usado a identificação pelo método http apenas, sem definir nome
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> deleteClient(@PathVariable Long id) {
         //return ResponseEntity.ok().build();
+    	costumerService.delete(id);
         return new ResponseEntity<String>("Deletado com sucesso", HttpStatus.OK);
     }
 
